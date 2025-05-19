@@ -2,20 +2,34 @@
   "name": "admin-dashboard",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
+    "@headlessui/react": "^2.2.3",
+    "@heroicons/react": "^2.2.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.21",
+    "date-fns": "^4.1.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-hot-toast": "^2.5.2",
+    "react-router-dom": "^7.6.0",
     "react-scripts": "5.0.1",
+    "recharts": "^2.15.3",
+    "tailwindcss": "^3.4.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "build:css": "postcss src/index.css -o dist/index.css",
+    "watch:css": "postcss src/index.css -o dist/index.css --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10"
   }
 }
