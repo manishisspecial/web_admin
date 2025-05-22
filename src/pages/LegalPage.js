@@ -10,20 +10,20 @@ import Footer from '../components/Footer';
 
 const LegalPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-neutral-900">
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative bg-white overflow-hidden">
+      <div className="relative bg-neutral-800 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <div className="relative z-10 pb-8 bg-neutral-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
             <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
               <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
                   <span className="block">Legal</span>{' '}
-                  <span className="block text-emerald-600">Information</span>
+                  <span className="block text-primary-400">Information</span>
                 </h1>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                <p className="mt-3 text-base text-neutral-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   Important information about our policies and terms of service.
                 </p>
               </div>
@@ -32,7 +32,7 @@ const LegalPage = () => {
         </div>
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full opacity-75"
             src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
             alt="Healthcare policy and legal documents"
           />
@@ -40,27 +40,27 @@ const LegalPage = () => {
       </div>
 
       {/* Legal Sections */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-neutral-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {/* Privacy Policy */}
             <div>
               <div className="flex items-center">
-                <ShieldCheckIcon className="h-8 w-8 text-emerald-600" />
-                <h2 className="ml-3 text-3xl font-bold text-gray-900">Privacy Policy</h2>
+                <ShieldCheckIcon className="h-8 w-8 text-primary-400" />
+                <h2 className="ml-3 text-3xl font-bold text-white">Privacy Policy</h2>
               </div>
-              <div className="mt-6 prose prose-emerald prose-lg text-gray-500">
+              <div className="mt-6 prose prose-invert prose-lg text-neutral-300">
                 <p>
                   At Shah Works, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
                 </p>
-                <h3>Information We Collect</h3>
+                <h3 className="text-white">Information We Collect</h3>
                 <ul>
                   <li>Personal information (name, email, phone number)</li>
                   <li>Health information relevant to your care</li>
                   <li>Payment information for services</li>
                   <li>Usage data and preferences</li>
                 </ul>
-                <h3>How We Use Your Information</h3>
+                <h3 className="text-white">How We Use Your Information</h3>
                 <ul>
                   <li>To provide and maintain our services</li>
                   <li>To notify you about changes to our services</li>
@@ -74,21 +74,21 @@ const LegalPage = () => {
             {/* Terms of Service */}
             <div>
               <div className="flex items-center">
-                <DocumentTextIcon className="h-8 w-8 text-emerald-600" />
-                <h2 className="ml-3 text-3xl font-bold text-gray-900">Terms of Service</h2>
+                <DocumentTextIcon className="h-8 w-8 text-primary-400" />
+                <h2 className="ml-3 text-3xl font-bold text-white">Terms of Service</h2>
               </div>
-              <div className="mt-6 prose prose-emerald prose-lg text-gray-500">
+              <div className="mt-6 prose prose-invert prose-lg text-neutral-300">
                 <p>
                   By accessing and using Shah Works' services, you agree to be bound by these Terms of Service.
                 </p>
-                <h3>Service Usage</h3>
+                <h3 className="text-white">Service Usage</h3>
                 <ul>
                   <li>You must provide accurate and complete information</li>
                   <li>You are responsible for maintaining the confidentiality of your account</li>
                   <li>You agree to use our services only for lawful purposes</li>
                   <li>We reserve the right to modify or discontinue services at any time</li>
                 </ul>
-                <h3>Intellectual Property</h3>
+                <h3 className="text-white">Intellectual Property</h3>
                 <p>
                   All content, features, and functionality of our services are owned by Shah Works and are protected by international copyright, trademark, and other intellectual property laws.
                 </p>
@@ -98,20 +98,20 @@ const LegalPage = () => {
             {/* Refund Policy */}
             <div>
               <div className="flex items-center">
-                <ArrowRightIcon className="h-8 w-8 text-emerald-600" />
-                <h2 className="ml-3 text-3xl font-bold text-gray-900">Refund Policy</h2>
+                <ArrowRightIcon className="h-8 w-8 text-primary-400" />
+                <h2 className="ml-3 text-3xl font-bold text-white">Refund Policy</h2>
               </div>
-              <div className="mt-6 prose prose-emerald prose-lg text-gray-500">
+              <div className="mt-6 prose prose-invert prose-lg text-neutral-300">
                 <p>
                   We strive to provide the best healthcare services. However, we understand that circumstances may arise where a refund is necessary.
                 </p>
-                <h3>Refund Eligibility</h3>
+                <h3 className="text-white">Refund Eligibility</h3>
                 <ul>
                   <li>Services not rendered due to our inability to provide them</li>
                   <li>Cancellation of services within 24 hours of booking</li>
                   <li>Technical issues preventing service delivery</li>
                 </ul>
-                <h3>Refund Process</h3>
+                <h3 className="text-white">Refund Process</h3>
                 <ul>
                   <li>Submit a refund request within 7 days of the service date</li>
                   <li>Include relevant documentation and reason for refund</li>
@@ -125,17 +125,17 @@ const LegalPage = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="bg-emerald-700">
+      <div className="bg-neutral-800">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="block">Have questions about our policies?</span>
-            <span className="block text-emerald-200">Contact our legal team for clarification.</span>
+            <span className="block text-primary-400">Contact our legal team for clarification.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-emerald-600 bg-white hover:bg-emerald-50"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700"
               >
                 Contact Us
                 <ArrowRightIcon className="ml-2 h-5 w-5" />

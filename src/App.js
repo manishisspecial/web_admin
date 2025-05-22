@@ -17,10 +17,25 @@ import ContactPage from './pages/ContactPage';
 import LegalPage from './pages/LegalPage';
 import PatientAuth from './pages/PatientAuth';
 import PatientDashboard from './pages/PatientDashboard';
+import PatientSignup from './pages/PatientSignup';
+import PatientForgotPassword from './pages/PatientForgotPassword';
 import { Toaster } from 'react-hot-toast';
 import AdminAuthWrapper from './components/AdminAuthWrapper';
 
 function App() {
+  const [isPatientAuthenticated, setIsPatientAuthenticated] = React.useState(() => {
+    return localStorage.getItem('isPatientAuthenticated') === 'true';
+  });
+
+  const setPatientAuthStatus = (status) => {
+    setIsPatientAuthenticated(status);
+    if (status) {
+      localStorage.setItem('isPatientAuthenticated', 'true');
+    } else {
+      localStorage.removeItem('isPatientAuthenticated');
+    }
+  };
+
   return (
     <Router>
       <Toaster />
@@ -34,14 +49,22 @@ function App() {
         <Route path="/preventive-care" element={<PreventiveCare />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/legal" element={<LegalPage />} />
-        <Route path="/patient/login" element={<PatientAuth />} />
-        <Route path="/patient/dashboard" element={<PatientDashboard />} />
+
+        {/* Patient Routes with Authentication Check */}
+        <Route path="/patient/login" element={<PatientAuth setAuthStatus={setPatientAuthStatus} />} />
+        <Route path="/patient/signup" element={<PatientSignup />} /> {/* Assuming signup doesn't require auth status prop */}
+        <Route path="/patient/forgot-password" element={<PatientForgotPassword />} /> {/* Assuming forgot password doesn't require auth status prop */}
+        
+        <Route
+          path="/patient/dashboard"
+          element={isPatientAuthenticated ? <PatientDashboard /> : <Navigate to="/patient/login" replace />}
+        />
 
         {/* Admin Authentication and Layout Wrapper */}
         <Route path="/admin/*" element={<AdminAuthWrapper />} >
            {/* These nested routes will be rendered by Outlet within AdminAuthWrapper's Layout */}
-           {/* Redirect /admin/ to /admin/dashboard */} 
-           <Route index element={<Navigate to="dashboard" replace />} /> 
+           {/* Redirect /admin/ to /admin/dashboard */}
+           <Route index element={<Navigate to="dashboard" replace />} />
            <Route path="dashboard" element={<Dashboard />} />
            <Route path="customers" element={<Customers />} />
            <Route path="payments" element={<Payments />} />
